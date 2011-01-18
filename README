@@ -1,0 +1,21 @@
+README for ruby-googleloader
+============================
+
+ruby-googleloader is a gem providing a ruby interface to Google CDN Loader.
+
+To install, type 'gem install ruby-googleloader'
+
+Usage:
+
+      require 'rubygems'
+      require 'ruby-googleloader'
+
+      googleloader = GoogleLoader::API.new
+      googleloader.developer_key = 123456789 # Sign-Up for a developer key at http://code.google.com/apis/loader/signup.html
+      googleloader.jquery("1", true) # jquery(version, uncompressed)
+      puts googleloader.markup
+      
+      <script type="text/javascript" src="https://www.google.com/jsapi?key=123456789"></script>
+      <script type="text/javascript">
+        google.load("jquery", "1", {uncompressed:true});
+      </script>
